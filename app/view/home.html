@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>home</title>
+    <style>
+      .form-row {
+        margin: 10px;
+      }
+      label {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/submit" method="post">
+      <fieldset>
+        <legend>a sample form</legend>
+        <div class="form-row">
+          <label for="name">
+            name[string]:
+            <input id="name" type="text" name="name" value="test" />
+          </label>
+        </div>
+        <div class="form-row">
+          <label for="age">
+            age[number]: <input id="age" type="number" name="age" value="19" />
+          </label>
+        </div>
+        <div class="form-row">
+          <label for="weight">
+            weight[range]: 50
+            <input
+              id="weight"
+              type="range"
+              name="weight"
+              value="70"
+              min="50"
+              max="90"
+            />90 kg
+          </label>
+        </div>
+        <div class="form-row">
+          favirate fruits[array]:
+          <label for="pineapple">
+            <input
+              id="pineapple"
+              type="checkbox"
+              name="fruits"
+              value="pineapple"
+              checked
+            />🍍
+          </label>
+          <label for="apple">
+            <input id="apple" type="checkbox" name="fruits" value="apple" />🍎
+          </label>
+          <label for="banana">
+            <input
+              id="banana"
+              type="checkbox"
+              name="fruits"
+              value="banana"
+              checked
+            />🍌
+          </label>
+        </div>
+        <div class="form-row">
+          gender[enum]:
+          <label for="male">
+            <input type="radio" id="male" name="gender" value="male" checked />
+            Male
+          </label>
+          <label for="female">
+            <input id="female" type="radio" name="gender" value="female" />
+            Female
+          </label>
+          <label for="other">
+            <input id="other" type="radio" name="gender" value="other" />
+            Other
+          </label>
+        </div>
+        <div>
+          <label for="someJson">
+            json data:
+            <textarea name="someJson" id="someJson" cols="30" rows="10">
+              {"foo":"foo","bar":"bar"}
+            </textarea>
+          </label>
+        </div>
+        <div class="form-row">
+          <button type="submit">submit</button>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
